@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" media="screen,projection">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <title>Is The LDC Open?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <div class="navbar">
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Is The LDC Open?</a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="http://www.carleton.edu">Carleton Home</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <a name="top"></a>
+  <div class="row">
+    <div class="col s12 m4">
+      <h3>Welcome!</h3>
+      <p class="flow-text">This applet contains a live dashboard of facility hours at Carleton College.</p>
+      <p class="flow-text">Facility hours may vary from what is posted here, and are subject to change without notice - especially during finals and breaks. Always check with the facility in question to confirm their current hours.</p>
+      <p class="flow-text">Jump to: <a href="#sayles">Sayles</a> - <a href="#burton">Dining</a> - <a href="#libe">Libe</a> - <a href="#msc">Academic Support</a> - <a href="#its">ITS</a> - <a href="#rec">Recreation</a> - <a href="#registrar">Business/Admin</a> - <a href="#shac">Other</a></p>
+      <p>This information refreshes every 30 seconds.</p>
+      <div class="progress">
+        <div class="determinate" id="progress-bar" style="width: 100%"></div>
+      </div>
+      <p>Email <code>boslert at carleton</code> with feedback.</p>
+      <div class="hide-on-small-only">
+        <hr>
+        <p class="flow-text">Notice something wrong?</p>
+        <p>If you notice something is wrong - such as a missing building, inaccurate hours, or misspelled office - please shoot me an email and I can take a look.</p>
+        <p><strong>Please note that many facilities' hours will not display correctly during FINALS and BREAKS.</strong> This is particularly true for Sayles and the Libe. That being said, please do email me with updated information if something is wrong.</p>
+        <hr>
+        <p class="flow-text">Icon Definitions</p>
+        <p><span class="green-text"><i class="material-icons">done</i> Open</span></p>
+        <p><span class="green-text"><i class="material-icons">credit_card</i> Open (OneCard required)</span></p>
+        <p><span class="orange-text"><i class="material-icons">access_time</i> Closes soon</span> (within an hour)</p>
+        <p><span class="orange-text"><i class="material-icons">credit_card</i> Closes soon, OneCard required</span></p>
+        <p><span class="red-text"><i class="material-icons">close</i> Closed</span></p>
+        <p><span class="indigo-text"><i class="material-icons">refresh</i> Open 24 hours</span></p>
+        <p><span class="indigo-text"><i class="material-icons">credit_card</i> Open 24 hours, OneCard required</span></p>
+        <hr>
+        <p class="flow-text">About this site</p>
+        <p>I wrote the 150 lines of code and ~100 lines of markup that make up this page in about a three-day span as a fun project. The site is named "Is the LDC open?" because my roommate and my friends kept asking me that question during New Student Week.</p>
+        <p>Side note, who eats dinner at 4:45?</p>
+        <p>I'm using <a href="http://www.materializecss.com">MaterializeCSS</a> for layout, and the <a href="https://www.google.com/design/icons/">icons</a> and <a href="https://www.google.com/fonts/specimen/Roboto">font</a> are provided by Google. Other than that, everything was written by hand. (I'll publish the source soon for those of you who program in PHP.)</p>
+      </div>
+    </div>
+    <div class="col s12 m8">
+      <!-- <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title black-text">I'm on KRLX!</span>
+          <p>I'm currently broadcasting on KRLX! Tune in at 88.1 FM or radio.krlx.org.</p>
+        </div>
+      </div> -->
+      <div class="center-align potato">
+        <h2>One moment please...</h2>
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="collection with-header anti-potato" id="facilityList" style="display: none;">
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <p class="center-align flow-text">made with &lt;3 by <a href="http://www.tatebosler.com">Tate Bosler</a> - copyright &copy; Tate Bosler 2015</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+  <script src="ga.js"></script>
+  <script src="autorefresh.js"></script>
+</body>
