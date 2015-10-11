@@ -2,6 +2,8 @@
 
 There is only one API endpoint, `sayleshill.xyz/api.php`. The API accepts a dictionary of arrays of strings, which can be thought of as categories and facilities (as presented on sayleshill.xyz). This dictionary must be JSON encoded. If nothing is present, the API will assume `{"Sayles-Hill Campus Center": ["sayles"]}`.
 
+**Data must be sent via POST, in the `buildings` field.**
+
 The following are two examples of valid payloads, if they were sent via JavaScript:
 
 ```javascript
