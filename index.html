@@ -1,88 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" media="screen,projection">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <title>Is The LDC Open?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
-<body>
-  <div class="navbar">
-  <nav class="blue darken-4">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Is The LDC Open?</a>
-      <ul class="left hide-on-med-and-down">
-        <li><a href="http://www.carleton.edu">Carleton Home</a></li>
-      </ul>
-    </div>
-  </nav>
-  </div>
-  <a name="top"></a>
-  <div class="row">
-    <div class="col s12 m4">
-      <h3>Welcome!</h3>
-      <p class="flow-text">This applet contains a live dashboard of facility hours at Carleton College.</p>
-      <p class="flow-text">Facility hours may vary from what is posted here, and are subject to change without notice - especially during finals and breaks. Always check with the facility in question to confirm their current hours.</p>
-      <p class="flow-text">Jump to: <a href="#sayles">Sayles</a> - <a href="#burton">Dining</a> - <a href="#libe">Libe</a> - <a href="#msc">Academic Support</a> - <a href="#its">ITS</a> - <a href="#rec">Recreation</a> - <a href="#registrar">Business/Admin</a> - <a href="#shac">Other</a></p>
-      <p>This information refreshes every 30 seconds.</p>
-      <div class="progress">
-        <div class="determinate" id="progress-bar" style="width: 100%"></div>
-      </div>
-      <p>Email <code>boslert at carleton</code> with feedback.</p>
-      <div class="hide-on-small-only">
-        <hr>
-        <p class="flow-text">Notice something wrong?</p>
-        <p>If you notice something is wrong - such as a missing building, inaccurate hours, or misspelled office - please shoot me an email and I can take a look.</p>
-        <p><strong>Please note that many facilities' hours will not display correctly during FINALS and BREAKS.</strong> This is particularly true for Sayles and the Libe. That being said, please do email me with updated information if something is wrong.</p>
-        <hr>
-        <p class="flow-text">Icon Definitions</p>
-        <p><span class="green-text"><i class="material-icons">done</i> Open</span></p>
-        <p><span class="green-text"><i class="material-icons">credit_card</i> Open (OneCard required)</span></p>
-        <p><span class="orange-text"><i class="material-icons">access_time</i> Closes soon</span> (within an hour)</p>
-        <p><span class="orange-text"><i class="material-icons">credit_card</i> Closes soon, OneCard required</span></p>
-        <p><span class="red-text"><i class="material-icons">close</i> Closed</span></p>
-        <p><span class="indigo-text"><i class="material-icons">refresh</i> Open 24 hours</span></p>
-        <p><span class="indigo-text"><i class="material-icons">credit_card</i> Open 24 hours, OneCard required</span></p>
-        <hr>
-        <p class="flow-text">About this site</p>
-        <p>I wrote the 150 lines of code and ~100 lines of markup that make up this page in about a three-day span as a fun project. The site is named "Is the LDC open?" because my roommate and my friends kept asking me that question during New Student Week.</p>
-        <p>Side note, who eats dinner at 4:45?</p>
-        <p>I'm using <a href="http://www.materializecss.com">MaterializeCSS</a> for layout, and the <a href="https://www.google.com/design/icons/">icons</a> and <a href="https://www.google.com/fonts/specimen/Roboto">font</a> are provided by Google. Other than that, everything was written by hand. (I'll publish the source soon for those of you who program in PHP.)</p>
-      </div>
-    </div>
-    <div class="col s12 m8">
-      <!-- <div class="card">
-        <div class="card-content black-text">
-          <span class="card-title black-text">I'm on KRLX!</span>
-          <p>I'm currently broadcasting on KRLX! Tune in at 88.1 FM or radio.krlx.org.</p>
-        </div>
-      </div> -->
-      <div class="center-align potato">
-        <h2>One moment please...</h2>
-        <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ul class="collection with-header anti-potato" id="facilityList" style="display: none;">
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <p class="center-align flow-text">made with &lt;3 by <a href="http://www.tatebosler.com">Tate Bosler</a> - copyright &copy; Tate Bosler 2015</p>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
-  <script src="ga.js"></script>
-  <script src="autorefresh.js"></script>
-</body>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Dashboard by ichiefboz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">The Dashboard</h1>
+      <h2 class="project-tagline">GitHub page for The Dashboard at sayleshill.xyz.</h2>
+      <a href="https://github.com/ichiefboz/Carleton-Dashboard" class="btn">View on GitHub</a>
+      <a href="https://github.com/ichiefboz/Carleton-Dashboard/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ichiefboz/Carleton-Dashboard/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="welcome-to-the-github-site-for-the-dashboard" class="anchor" href="#welcome-to-the-github-site-for-the-dashboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the GitHub site for The Dashboard.</h3>
+
+<p>Check out the live site at <a href="http://sayleshill.xyz">sayleshill.xyz</a>. This page discusses how to implement the database protocol if you'd like to include data in your own website. Keep in mind that hours can fluctuate between terms and breaks, so this data might not be fully accurate.</p>
+
+<p>To get the current and upcoming statuses of buildings, send a JSON dictionary with categories (which you define) and building IDs (which are pre-defined in the database) to <code>api.php</code>. This dictionary goes in the <code>buildings</code> POST field.</p>
+
+<p>Here are some examples of valid dictionaries:</p>
+
+<div class="highlight highlight-source-js"><pre>{<span class="pl-s"><span class="pl-pds">"</span>Sayles-Hill Campus Center<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>sayles<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>security<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>security-office<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>sayles-cafe<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>bookstore<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>post<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>onecard<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ccce<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>career<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>sao<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>info<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>krlx<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Dining<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>burton<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ldc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>east-express<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>sayles-cafe<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>weitz-cafe<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>dominos<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Laurence McKinley Gould Library<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>libe<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>reference<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>libe-it<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>writing<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>archives<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Academic Support<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>msc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>writing<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>language<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Information Technology Services<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>its<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>libe-it<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>peps<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Recreation<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>rec<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>wall-bouldering<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>cowling<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>cowling-pool<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>west<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>west-pool<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>stadium<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Business and Administration<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>registrar<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>business<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>mail<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>print<span class="pl-pds">"</span></span>],
+<span class="pl-s"><span class="pl-pds">"</span>Other<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>shac<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>dacie-moses<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>perlman<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>idealab<span class="pl-pds">"</span></span>]}</pre></div>
+
+<div class="highlight highlight-source-js"><pre>{<span class="pl-s"><span class="pl-pds">"</span>Buildings<span class="pl-pds">"</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>sayles<span class="pl-pds">"</span></span>]}</pre></div>
+
+<p>The site will then give you a JSON array back, sorted by your defined categories, with information for each building.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ichiefboz/Carleton-Dashboard">The Dashboard</a> is maintained by <a href="https://github.com/ichiefboz">ichiefboz</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
